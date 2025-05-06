@@ -55,16 +55,16 @@
 <body class="bg-light">
     <div id="app">
         <nav class="navbar navbar-expand-md shadow-sm mb-4">
-            <div class="container">
+        <div class="container">
                 <a class="navbar-brand fw-bold" href="{{ url('/') }}">
                     <i class="fas fa-chart-line me-2"></i>{{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="reportDropdown" role="button" data-bs-toggle="dropdown">
                                 <i class="fas fa-file-alt me-1"></i>Reports
@@ -93,12 +93,12 @@
                                 </li>
                             </ul>
                         </li>
-                    </ul>
-                </div>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <main class="py-4">
+    <main class="py-4">
             <div class="container">
                 @if(session('success'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -114,9 +114,9 @@
                     </div>
                 @endif
 
-                @yield('content')
+        @yield('content')
             </div>
-        </main>
+    </main>
 
         <footer class="py-4 bg-white mt-auto border-top">
             <div class="container text-center">

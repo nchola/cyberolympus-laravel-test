@@ -145,15 +145,15 @@ class CustomerController extends Controller
             return response()->json(['error' => 'Data tidak ditemukan'], 404);
         }
 
-        // Delete user first (cascade)
-        DB::table('users')
-            ->where('id', $customer->referral_id)
-            ->delete();
+            // Delete user first (cascade)
+            DB::table('users')
+                ->where('id', $customer->referral_id)
+                ->delete();
 
-        // Delete customer
-        DB::table('customer')
-            ->where('id', $id)
-            ->delete();
+            // Delete customer
+            DB::table('customer')
+                ->where('id', $id)
+                ->delete();
 
         return response()->json(['success' => true]);
     }
